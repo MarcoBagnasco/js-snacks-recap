@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks Recap</title>
+
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,900;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="root">
+        <ul>
+            <li v-for="(item, index) in contacts" :class="{active: !item.active}">{{item.firstName}} {{item.lastName}} <span  @click="getLastName(index)">{{item.number}}</span></li>
+        </ul>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
