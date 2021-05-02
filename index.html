@@ -9,6 +9,9 @@
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
+
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,900;1,700;1,800&display=swap" rel="stylesheet">
@@ -18,12 +21,278 @@
 </head>
 <body>
     <div id="root">
-        <ul>
+
+        <!----------------------- Basic Snacks ----------------------->
+        <!-- <ul>
             <li v-for="(item, index) in contacts" :class="{active: !item.active}">{{item.firstName}} {{item.lastName}} <span  @click="getLastName(index)">{{item.number}}</span></li>
-        </ul>
+        </ul> -->
+        <!----------------------- Basic Snacks ----------------------->
+
+        <!-- APP NAVIGATION -->
+        <nav class="app-nav">
+            <a href="#d1">
+                <div class="nav-btn flex jc-center ai-center">1</div>
+            </a>
+            <a href="#d2">
+                <div class="nav-btn flex jc-center ai-center">2</div>
+            </a>
+            <a href="#wk">
+                <div class="nav-btn flex jc-center ai-center">3</div>
+            </a>
+            <a class="refresh" href="#" @click="refresh">
+                <div class="nav-btn flex jc-center ai-center"><i class="fas fa-redo-alt"></i></div>
+            </a>
+        </nav>
+
+        <!-- APP HEADER -->
+        <header class="app-header flex jc-center ai-center">
+            <h1>JSNACKS RECAP</h1>
+        </header>
+
+        <!-- DAY 1 -->
+        <section id="d1" class="day-1">
+            <h2>Day 1</h2>
+
+            <div class="snacks-wrapper flex jc-center">
+                <!-- Snack 1 -->
+                <div class="snack">
+                    <h3>snack 1</h3>
+                    <div class="flex ai-center">
+                        <!-- Original List -->
+                        <div class="list-wrapper">
+                            <h4>Brands</h4>
+                            <ul class="original-list">
+                                <li v-for="brand in brands">{{brand.name}}</li>
+                            </ul>
+                        </div>
+                        <!-- Execute Button -->
+                        <button class="btn" @click="snack1Day1">Execute</button>
+                        <!-- Transform List -->
+                        <div class="list-wrapper">
+                            <h4 v-show="minBrandsYear.length > 0">Min & Year</h4>
+                            <ul class="transform-list">
+                                <li v-for="brand in minBrandsYear">{{brand.name}} {{brand.foundationYear}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snack 2 -->
+                <div class="snack">
+                    <h3>snack 2</h3>
+                    <!-- Original List -->
+                    <h4>Cars</h4>
+                    <ul class="objects-list flex">
+                        <li v-for="item in cars">
+                            <ul class="property-list">
+                                <li v-for="(element, key) in item"><div class="key">{{key}}:</div> {{element}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Execute Button -->
+                    <button class="btn" @click="snack2Day1">Execute</button>
+                    <!-- Alimentation Lists -->
+                    <div v-show="others.length > 0" class="alimentation-lists flex jc-center">
+                        <!-- Benzine -->
+                        <div class="list-wrapper">
+                            <h4>Benzine</h4>
+                            <ul>
+                                <li v-for="item in benzine">{{item.brand}} {{item.model}}</li>
+                            </ul>
+                        </div>
+                        <!-- Diesel -->
+                        <div class="list-wrapper">
+                            <h4>Diesel</h4>
+                            <ul>
+                                <li v-for="item in diesel">{{item.brand}} {{item.model}}</li>
+                            </ul>
+                        </div>
+                        <!-- Others -->
+                        <div class="list-wrapper">
+                            <h4>Others</h4>
+                            <ul>
+                                <li v-for="item in others">{{item.brand}} {{item.model}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DAY 2 -->
+        <section id="d2" class="day-2">
+            <h2>Day 2</h2>
+
+            <div class="snacks-wrapper flex jc-center">
+                <!-- SNACK 1 -->
+                <div class="snack">
+                    <h3>snack 1</h3>
+                    <!-- Original List -->
+                    <h4>Animals</h4>
+                    <ul class="objects-list flex">
+                        <li v-for="item in animals">
+                            <ul class="property-list">
+                                <li v-for="(element, key) in item"><div class="key">{{key}}:</div> {{element}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Execute Button -->
+                    <button class="btn" @click="snack1Day2">Execute</button>
+                    <!-- Mammals -->
+                    <div v-show="mammals.length > 0" class="list-wrapper margin-auto">
+                        <h4>Mammals</h4>
+                        <ul>
+                            <li v-for="item in mammals">{{item.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- SNACK 2 -->
+                <div class="snack">
+                    <h3>snack 2</h3>
+                    <!-- People List -->
+                    <h4>People</h4>
+                    <ul class="objects-list flex">
+                        <li v-for="item in people">
+                            <ul class="property-list">
+                                <li v-for="(element, key) in item"><div class="key">{{key}}:</div> {{element}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Execute Button -->
+                    <button class="btn" @click="snack2Day2">Execute</button>
+                    <!-- Allowed to drive  -->
+                    <div v-show="allowDrive.length > 0" class="list-wrapper margin-auto">
+                        <h4>Allowed to drive</h4>
+                        <ul>
+                            <li v-for="item in allowDrive" :class="{denied: item.includes('cannot')}">{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SNACK 3 -->
+                <div class="snack">
+                    <h3>snack 3</h3>
+                    <!-- PC List -->
+                    <h4>PC</h4>
+                    <ul class="objects-list flex">
+                        <li v-for="item in pc">
+                            <ul class="property-list">
+                                <li v-for="(element, key) in item"><div class="key">{{key}}:</div> {{element}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Execute Button -->
+                    <button class="btn" @click="snack3Day2">Execute</button>
+                    <!-- PC Windows List -->
+                    <div v-show="win.length > 0">
+                        <h4>PC Windows</h4>
+                        <ul class="objects-list flex jc-center">
+                            <li v-for="item in win">
+                                <ul class="property-list">
+                                    <li v-for="(element, key) in item"><div class="key">{{key}}:</div> {{element}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEEKEND -->
+        <section id="wk" class="weekend">
+            <h2>WeekEnd</h2>
+
+            <div class="snacks-wrapper flex jc-center">
+                <!-- SNACK 1 -->
+                <div class="snack">
+                    <h3>snack 1</h3>
+                    <div class="flex ai-center">
+                        <!-- Original List -->
+                        <div class="list-wrapper">
+                            <h4>Strings</h4>
+                            <ul class="original-list">
+                                <li v-for="item in words">{{item}}</li>
+                            </ul>
+                        </div>
+                        <!-- Execute Button -->
+                        <button class="btn" @click="snack1Weekend">Execute</button>
+                         <!-- Transform List -->
+                         <div class="list-wrapper">
+                            <h4 v-show="capitalized.length > 0">Capitalized</h4>
+                            <ul class="transform-list">
+                                <li v-for="item in capitalized">{{item}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SNACK 2 -->
+                <div class="snack">
+                    <h3>snack 2</h3>
+                    <!-- Open Tab -->
+                    <h4>Open Tab</h4>
+                    <ul class="objects-list flex">
+                        <li class="pointer" v-for="(item, index) in browser.tab"  @click="selectTab(index)">
+                            <ul class="property-list">
+                                <li>{{item}}</li>
+                                <li v-show="browser.activeTab === index">ACTIVE</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Execute Button -->
+                    <button class="btn" @click="snack2Weekend">Execute</button>
+                </div>
+
+                <!-- SNACK 3 -->
+                <div class="snack">
+                    <h3>snack 3</h3>
+                    <div class="flex ai-center">
+                        <!-- Original List -->
+                        <div class="list-wrapper">
+                            <h4>Strings</h4>
+                            <ul class="original-list">
+                                <li v-for="item in words2">{{item}}</li>
+                            </ul>
+                        </div>
+                        <!-- Execute Button -->
+                        <button class="btn" @click="snack3Weekend">Execute</button>
+                         <!-- Transform List -->
+                         <div class="list-wrapper">
+                            <h4 v-show="capitalized2.length > 0">Capitalized</h4>
+                            <ul class="transform-list">
+                                <li v-for="item in capitalized2">{{item}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SNACK 4 -->
+                <div class="snack">
+                    <h3>snack 4</h3>
+                    <!-- Contacts -->
+                    <div class="flex ai-center">
+                        <div class="list-wrapper">
+                            <h4>Contacts</h4>
+                            <ul class="original-list">
+                                <li v-for="(item, index) in contacts" :class="{denied: !item.active}">{{item.firstName}} {{item.lastName}} <span class="number"  @click="getLastName(index)">{{item.number}}</span></li>
+                            </ul>
+                        </div>
+                        <!-- Execute Button -->
+                        <button class="btn" @click="snack4Weekend">Execute</button>
+                        <!-- Selected Contact -->
+                        <div class="contact flex ai-center">
+                            <h4>Selected Contact</h4>
+                            <div class="select-contact flex jc-center ai-center">{{selectedContact}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/script2.js"></script>
 </body>
 </html>

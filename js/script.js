@@ -79,56 +79,56 @@
 
 
 //  const auto = [
-//     {
-//         marca: 'Renault',
-//         modello: 'Twingo',
-//         alimentazione: 'Benzina',
-//     },
-//     {
-//         marca: 'Fiat',
-//         modello: 'Marea',
-//         alimentazione: 'Benzina',
-//     },
-//     {
-//         marca: 'Volkswagen',
-//         modello: 'Polo',
-//         alimentazione: 'Diesel',
-//     },
-//     {
-//         marca: 'Tesla',
-//         modello: 'Model X',
-//         alimentazione: 'Elettrica',
-//     },
-//     {
-//         marca: 'Renault',
-//         modello: 'Clio',
-//         alimentazione: 'Metano',
-//     },
-//     {
-//         marca: 'Fiat',
-//         modello: 'Punto',
-//         alimentazione: 'Diesel',
-//     },
-//     {
-//         marca: 'Merceds',
-//         modello: 'Classe A',
-//         alimentazione: 'Benzina',
-//     },
-//     {
-//         marca: 'Fiat',
-//         modello: 'Fiorino',
-//         alimentazione: 'Gpl',
-//     },
-//     {
-//         marca: 'BMW',
-//         modello: 'Z4',
-//         alimentazione: 'Benzina',
-//     },
-//     {
-//         marca: 'Tesla',
-//         modello: 'Model S',
-//         alimentazione: 'Elettrica',
-//     },
+    // {
+    //     marca: 'Renault',
+    //     modello: 'Twingo',
+    //     alimentazione: 'Benzina',
+    // },
+    // {
+    //     marca: 'Fiat',
+    //     modello: 'Marea',
+    //     alimentazione: 'Benzina',
+    // },
+    // {
+    //     marca: 'Volkswagen',
+    //     modello: 'Polo',
+    //     alimentazione: 'Diesel',
+    // },
+    // {
+    //     marca: 'Tesla',
+    //     modello: 'Model X',
+    //     alimentazione: 'Elettrica',
+    // },
+    // {
+    //     marca: 'Renault',
+    //     modello: 'Clio',
+    //     alimentazione: 'Metano',
+    // },
+    // {
+    //     marca: 'Fiat',
+    //     modello: 'Punto',
+    //     alimentazione: 'Diesel',
+    // },
+    // {
+    //     marca: 'Merceds',
+    //     modello: 'Classe A',
+    //     alimentazione: 'Benzina',
+    // },
+    // {
+    //     marca: 'Fiat',
+    //     modello: 'Fiorino',
+    //     alimentazione: 'Gpl',
+    // },
+    // {
+    //     marca: 'BMW',
+    //     modello: 'Z4',
+    //     alimentazione: 'Benzina',
+    // },
+    // {
+    //     marca: 'Tesla',
+    //     modello: 'Model S',
+    //     alimentazione: 'Elettrica',
+    // },
 // ];
 
 // const benzina = auto.filter(item => item.alimentazione === 'Benzina');
@@ -170,36 +170,36 @@
  *******************************************/
 
 // const animals = [
-//     {
-//         nome: 'leone',
-//         famiglia: 'felidi',
-//         classe: 'mammiferi'
-//     },
-//     { 
-//         nome: 'cane',
-//         famiglia: 'canidi', 
-//         classe: 'mammiferi' 
-//     },
-//     { 
-//         nome: 'gallina', 
-//         famiglia: 'fasianidi', 
-//         classe: 'uccelli' 
-//     },
-//     { 
-//         nome: 'squalo bianco', 
-//         famiglia: 'lamnidi', 
-//         classe: 'condritti' 
-//     },
-//     { 
-//         nome: 'cobra', 
-//         famiglia: 'elapidi', 
-//         classe: 'rettili' 
-//     },
-//     { 
-//         nome: 'mucca', 
-//         famiglia: 'bovidi', 
-//         classe: 'mammiferi' 
-//     },
+    // {
+    //     nome: 'leone',
+    //     famiglia: 'felidi',
+    //     classe: 'mammiferi'
+    // },
+    // { 
+    //     nome: 'cane',
+    //     famiglia: 'canidi', 
+    //     classe: 'mammiferi' 
+    // },
+    // { 
+    //     nome: 'gallina', 
+    //     famiglia: 'fasianidi', 
+    //     classe: 'uccelli' 
+    // },
+    // { 
+    //     nome: 'squalo bianco', 
+    //     famiglia: 'lamnidi', 
+    //     classe: 'condritti' 
+    // },
+    // { 
+    //     nome: 'cobra', 
+    //     famiglia: 'elapidi', 
+    //     classe: 'rettili' 
+    // },
+    // { 
+    //     nome: 'mucca', 
+    //     famiglia: 'bovidi', 
+    //     classe: 'mammiferi' 
+    // },
 // ];
 // const mammiferi = animals.filter(element => element.classe === 'mammiferi');
 // console.log(mammiferi);
@@ -266,41 +266,41 @@
  * Creiamo un nuovo array che indichi i pc che hanno Windows e di questi andiamo a tirar fuori la differenza tra prezzo originale e scontato.
  *******************************************/
 // const pc = [
-//     {
-//         nome: 'Susan',
-//         marca: 'Asus',
-//         hasWindows: true,
-//         prezzo: 1400,
-//         prezzoScontato: 1000,
-//     },
-//     {
-//         nome: 'Qwerty',
-//         marca: 'HP',
-//         hasWindows: false,
-//         prezzo: 899,
-//         prezzoScontato: 599,
-//     },
-//     {
-//         nome: 'MacBook',
-//         marca: 'Apple',
-//         hasWindows: false,
-//         prezzo: 1200,
-//         prezzoScontato: 799,
-//     },
-//     {
-//         nome: 'Bau',
-//         marca: 'Asus',
-//         hasWindows: true,
-//         prezzo: 400,
-//         prezzoScontato: 150,
-//     },
-//     {
-//         nome: 'ZXCV',
-//         marca: 'Lenovo',
-//         hasWindows: true,
-//         prezzo: 900,
-//         prezzoScontato: 450,
-//     },
+    // {
+    //     nome: 'Susan',
+    //     marca: 'Asus',
+    //     hasWindows: true,
+    //     prezzo: 1400,
+    //     prezzoScontato: 1000,
+    // },
+    // {
+    //     nome: 'Qwerty',
+    //     marca: 'HP',
+    //     hasWindows: false,
+    //     prezzo: 899,
+    //     prezzoScontato: 599,
+    // },
+    // {
+    //     nome: 'MacBook',
+    //     marca: 'Apple',
+    //     hasWindows: false,
+    //     prezzo: 1200,
+    //     prezzoScontato: 799,
+    // },
+    // {
+    //     nome: 'Bau',
+    //     marca: 'Asus',
+    //     hasWindows: true,
+    //     prezzo: 400,
+    //     prezzoScontato: 150,
+    // },
+    // {
+    //     nome: 'ZXCV',
+    //     marca: 'Lenovo',
+    //     hasWindows: true,
+    //     prezzo: 900,
+    //     prezzoScontato: 450,
+    // },
 // ];
 
 // const windows = pc.filter(item => item.hasWindows).map(item => {
@@ -429,4 +429,3 @@ const app = new Vue({
         }
     },
 });
-
